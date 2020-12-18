@@ -7,7 +7,7 @@ public class MusicPlayer : MonoBehaviour
     // Start is called before the first frame update
     public AudioSource AudioSource;
 
-    private float musicVolume = 1f;
+    private float musicVolume = 0.5f;
 
     void Start()
     {

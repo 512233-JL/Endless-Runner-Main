@@ -17,14 +17,18 @@ public class Player : MonoBehaviour {
     public GameObject moveEffect;
     public Animator camAnim;
     public Text healthDisplay;
+    
 
     public GameObject spawner;
     public GameObject restartDisplay;
+    public GameObject explosionSound;
 
     private void Update()
     {
+        
 
         if (health <= 0) {
+            Instantiate(explosionSound, transform.position, Quaternion.identity);
             spawner.SetActive(false);
             restartDisplay.SetActive(true);
             Destroy(gameObject);
